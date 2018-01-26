@@ -1,7 +1,3 @@
-html,body{
-    height: 100%;
-    background-color: #f1f1f1 !important;
-}
 .sign{
     width: 100%;
     font-size: 14px;
@@ -9,7 +5,7 @@ html,body{
 }
 .logo{
     position: absolute;
-    top: 55px;
+    top: 56px;
     left: 50px;
 }
 .logo img{
@@ -17,11 +13,11 @@ html,body{
 }
 .main{
     width: 400px;
-    margin: 50px auto 0;
+    margin: 165px auto 0;
     padding: 50px 50px 30px;
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0 0 8 rgba(0,0,0,.1);
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
     display: inline-block;
 }
 .main .title{
@@ -158,7 +154,7 @@ html,body{
 }
 .main form .ssm{
     position: relative;
-    display: none;
+    /*display: none;*/
 }
 .main form .input-prepend a.send-ssm{
     position: absolute;
@@ -179,8 +175,8 @@ html,body{
     .logo{
         display: none;
     }
-    html,body{
-        background-color: #fff!important;
+    #sign-template {
+        background-color: #fff;
     }
     .main{
         box-shadow: none;

@@ -1,3 +1,24 @@
+
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    background: #fff;
+    color: #333;
+}
+#__nuxt{
+    height: 100%;
+}
+#sign-template{
+    height: 100%;
+    background: #f1f1f1;
+}
+#default-template{
+    height: 100%;
+    padding-top: 56px;
+    background-color: #fff;
+}
 a,a:hover,a:focus {
     text-decoration: none!important;
     color: inherit!important;
@@ -11,6 +32,27 @@ input:focus{
 }
 ul,ol,dl {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0!important;
+    padding: 0!important;
+}
+img{
+    max-width: 100%;
+}
+.my-container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 0px) {
+    .my-container{
+        max-width: 735px!important;
+    }
+}
+@media (min-width: 1080px) {
+    .my-container{
+        max-width: 945px!important;
+    }
 }

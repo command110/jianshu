@@ -1,5 +1,5 @@
 <template>
-    <div style="height:100%">
+    <div id="sign-template">
         <nuxt/>
     </div>
 </template>
@@ -13,3 +13,6 @@
 
     }
 </script>
+<style>
+
+</style>

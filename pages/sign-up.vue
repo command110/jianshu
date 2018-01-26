@@ -22,10 +22,10 @@
                             <i class="fa fa-user"></i>
                         </div>
                     <div class="input-prepend">
-                            <input type="text" value="" name="" placeholder="手机号">
+                            <input @keyup="keySsm('key')" type="text" value="" name="" placeholder="手机号">
                             <i class="fa fa-phone"></i>
                         </div>
-                    <div class="input-prepend ssm">
+                    <div class="input-prepend ssm" v-show="show">
                         <input type="text" name="" value="" placeholder="手机验证码">
                         <i class="fa fa-shield"></i>
                         <a class="send-ssm btn btn-success">发送验证码</a>
@@ -61,6 +61,11 @@
 <script>
     import '~/assets/css/sign.css'
     export default {
+        data(){
+            return {
+                show:false,
+            }
+        },
         layout:'sign',//指的是当前页面的默认模板是layouts文件夹下的sign
         head(){
             return {
@@ -68,6 +73,15 @@
                 meta:[
                     {hide:'description',name:'description',content:'注册界面'}
                 ]
+            }
+        },
+        methods:{
+            keySsm(val){
+                if(val == 'key'){
+                    this.show = true
+                }else {
+                    this.show = false
+                }
             }
         }
     }
