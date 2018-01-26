@@ -4,12 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/nuxt.config.js" line="12" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d1370e9-286e-4575-9251-d0921d17e0ae" name="Default" comment="">
+    <list default="true" id="1d1370e9-286e-4575-9251-d0921d17e0ae" name="Default" comment="大概布局">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" afterPath="$PROJECT_DIR$/assets/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/assets/css/sign.css" afterPath="$PROJECT_DIR$/assets/css/sign.css" />
-      <change beforePath="$PROJECT_DIR$/components/myHeader.vue" afterPath="$PROJECT_DIR$/components/myHeader.vue" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" afterPath="$PROJECT_DIR$/pages/index.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +24,8 @@
           <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/index.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="259">
-                  <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+                <state relative-caret-position="298">
+                  <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
                   <folding>
                     <element signature="e#1346#1391#0" expanded="true" />
                   </folding>
@@ -44,8 +40,8 @@
           <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="397">
-                  <caret line="73" column="16" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+                <state relative-caret-position="241">
+                  <caret line="69" column="10" lean-forward="true" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
                   <folding>
                     <element signature="e#68#99#0" expanded="false" />
                     <element signature="e#109#169#0" expanded="false" />
@@ -263,7 +259,7 @@
       <workItem from="1516766998817" duration="22169000" />
       <workItem from="1516841996867" duration="11706000" />
       <workItem from="1516861332284" duration="20342000" />
-      <workItem from="1516928787212" duration="17233000" />
+      <workItem from="1516928787212" duration="17277000" />
     </task>
     <task id="LOCAL-00001" summary="登录注册页面">
       <created>1516782960313</created>
@@ -286,11 +282,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516950085110</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="大概布局">
+      <created>1516960297623</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1516960297623</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91549000" />
+    <option name="totallyTimeSpent" value="91593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="124" y="-8" width="1804" height="1096" extended-state="6" />
@@ -351,7 +354,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="登录注册页面" />
     <MESSAGE value="导航栏基本结束" />
-    <option name="LAST_COMMIT_MESSAGE" value="导航栏基本结束" />
+    <MESSAGE value="大概布局" />
+    <option name="LAST_COMMIT_MESSAGE" value="大概布局" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -789,20 +793,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="e#1346#1391#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="73" column="16" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+        <state relative-caret-position="241">
+          <caret line="69" column="10" lean-forward="true" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
           <folding>
             <element signature="e#68#99#0" expanded="false" />
             <element signature="e#109#169#0" expanded="false" />
@@ -814,6 +808,16 @@
             <element signature="e#502#524#0" expanded="false" />
             <element signature="e#534#610#0" expanded="false" />
             <element signature="e#614#638#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="e#1346#1391#0" expanded="true" />
           </folding>
         </state>
       </provider>
