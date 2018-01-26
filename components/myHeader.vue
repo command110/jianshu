@@ -235,6 +235,8 @@
         min-width: 160px;
         box-shadow: 0 0 8px rgba(0,0,0,.1);
         font-size: 14px;
+        z-index: 5454545;
+        background-color: #fff;
     }
     nav .user .drop-menu ul{
         border: 1px solid #f1f1f1;
@@ -289,6 +291,8 @@
         position: absolute;
         min-width: 200px;
         box-shadow: 0 0 8px rgba(0,0,0,.1);
+        z-index: 5454545;
+        background-color: #fff;
     }
     nav .my-container .drop-menu ul{
         border: 1px solid #f1f1f1;
