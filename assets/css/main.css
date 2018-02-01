@@ -2,6 +2,13 @@
 *{
     box-sizing: border-box;
 }
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
 html,body{
     height: 100%;
     background: #fff;
@@ -38,6 +45,7 @@ ul,ol,dl {
 img{
     max-width: 100%;
 }
+/*整体布局居中*/
 .my-container{
     width: 100%;
     padding-right: 15px;
@@ -61,7 +69,6 @@ img{
     padding-top: 30px;
 }
 .index .main{
-    height: 100px;
     padding-right: 0;
 }
 .index .aside{
@@ -69,17 +76,683 @@ img{
 }
 .index .aside .board {
     margin-top: -4px;
+    padding-bottom: 4px;
+    position: relative;
 }
 .index .aside .board img{
     width: 100%;
     margin-bottom: 6px;
     border-radius: 4px;
 }
+/*轮播图*/
 .index .main .banner img{
     width: 100%;
     border-radius: 4px;
 }
+.index .main .banner{
+    margin-bottom: 35px;
+}
+/*右侧二维码*/
+.index .aside .app-download{
+    border: 1px solid #f1f1f1;
+    padding: 10px 22px;
+    margin-bottom: 30px;
+}
+.index .aside .board .ma-download{
+    max-width: 180px;
+    max-height: 180px;
+    border: 1px solid #f1f1f1;
+    box-shadow: 10px 10px 20px #000;
+    position: absolute;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 5%;
+    bottom: 10px;
+    left: 18%;
+    transition: all linear.5s;
+}
+.index .aside .board .ma-triangle{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top: 10px solid #f1f1f1 ;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 45%;
+}
+.index .aside .board .ma-download img{
+    width: 100%;
+}
+.index .aside .app-download a{
+    width: 100%;
+    height: 60px;
+    display: block;
+}
+.index .aside .app-download a>img{
+    width: 26%;
+    float: left;
+}
+.index .aside .app-download a .info{
+    width: 70%;
+    float: left;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+.index .aside .app-download a .info .title{
+    font-size: .95rem;
+    color: #333;
+}
+.index .aside .app-download a .info .title i{
+    margin-left: 5px;
+    font-size: 18px;
+}
+.index .aside .app-download a .info .description{
+    margin-top: 4px;
+    font-size: .8rem;
+    color: #999;
+}
+/*推荐文章列表*/
+.index .main .recommend-collection{
+    margin-bottom: 10px;
+}
+.index .main .recommend-collection a{
+    display: inline-block;
+    margin: 0 18px 18px 0;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    min-height: 32px;
+    overflow: hidden;
+}
+.index .main .recommend-collection a img{
+    width: 32px;
+    height: 32px;
+    vertical-align: bottom;
+}
+.index .main .recommend-collection a span{
+    display: inline-block;
+    padding:  0 10px;
+    line-height: 32px;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.index .main .recommend-collection .more-collection {
+    border: none;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 34px;
+}
+/*线*/
+.index .main .split-line {
+    margin: 0 0 15px;
+    border: 1px solid #f0f0f0;
+}
+
+/*文章列表*/
+.note-list{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.note-list li{
+    position: relative;
+    width: 100%;
+    padding: 0 0 17px 0;
+    margin: 0 0 17px 0;
+    border-bottom: 1px solid #f0f0f0;
+    word-wrap: break-word;
+}
+.note-list li.have-img>.wrap-img{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -60px;
+    width: 150px;
+    height: 120px;
+}
+.note-list li.have-img>.wrap-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: 1px solid #f0f0f0;
+}
+.note-list li.have-img .content{
+    padding-right: 160px;
+}
+/*文章列表 第一行作者*/
+.note-list .author{
+    margin-bottom: 14px;
+    font-size: 13px;
+}
+.note-list .author .avatar,.info{
+    display: inline-block;
+}
+.avatar{
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+.avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+.note-list .author .avatar{
+    margin: 0 10px 0 0;
+}
+.note-list .author .info .time{
+    color:#969696;
+    padding-left: 5px;
+}
+/*文章列表 第二行题目*/
+.note-list .title{
+    font-size: 18px;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 7px;
+}
+.note-list .title:visited{
+    color: #969696;
+}
+/*文章列表 第四行文章主题*/
+.note-list .abstract{
+    font-size: 13px;
+    line-height: 24px;
+    margin: 0 0 13px 0;
+}
+/*文章列表 最后一行*/
+.note-list .meta{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.note-list .meta .collection-tag{
+    color: #ea6f5a!important;
+    border: 1px solid #ea6f5a;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.note-list .meta .collection-tag:hover{
+    background-color: rgb(257,247,246);
+    border-color:  rgb(236,97,73);
+}
+.note-list .meta .tag{
+    margin-right: 10px;
+    color: #b4b4b4!important;
+    transition: all ease-in .3s;
+}
+.note-list .meta .tag:hover{
+    color: rgb(120,120,120)!important;
+}
+.note-list .meta span{
+    color: #b4b4b4!important;
+}
+@media (max-width: 1080px) {
+    .note-list li.have-img > .wrap-img {
+        margin-top: -50px;
+        bottom: 40px;
+        width: 125px;
+        height: 100px;
+    }
+
+    .note-list li.have-img > div {
+        padding-right: 135px;
+    }
+}
+
+/*文章列表底部按钮*/
+.index .main .load-more{
+    display: block;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    color: #fff!important;
+    background-color: #a5a5a5;
+    border-radius: 20px;
+    margin: 30px auto 50px;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+/*首页底部*/
+footer .my-container .row .a-footer{
+    color: #969696!important;
+    display: inline-block;
+    font-size: 13px;
+}
+footer .my-container .row .a-footer:hover{
+    color: #333333!important;
+}
+footer .my-container .row em{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    color: #969696!important;
+}
+/***************************新上榜页面**********************************/
+.index .row .main img.tag-banner{
+    margin-bottom: 30px;
+}
+/**************************二维码下载页面*******************************/
+
+.container-fluid{
+    padding: 0 15px;
+}
+.container-fluid .row{
+    position: relative;
+}
+/*第一部分row*/
+.container-fluid .row .top-part{
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+}
+.container-fluid .row .top-part .top-logo{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 40px;
+}
+.container-fluid .row .top-part .top-logo>img{
+    width: 100px;
+    height: 100px;
+}
+.container-fluid .row .top-part .top-logo .info{
+    width: 192px;
+    height: 76px;
+    margin-left: 20px;
+    vertical-align: middle
+}
+.container-fluid .row .top-part .top-logo .info .title{
+    width: 192px;
+    height: 43px;
+    font-size: 30px;
+    text-align: left;
+}
+.container-fluid .row .top-part .top-logo .info .slogan{
+    width: 192px;
+    height: 34px;
+    font-size: 24px;
+    font-weight: 300;
+}
+.container-fluid .row .top-part .background{
+    width: 765px;
+    height: 172px;
+    position: absolute;
+    left: 50%;
+    margin-left: -380px;
+    margin-top: -100px;
+    /*z-index: -1;*/
+}
+.container-fluid .row .top-part .phone-img{
+    width: 410px;
+    height: 314px;
+}
+.container-fluid .row .top-part .top-qrcode{
+    display: inline-block;
+    margin: 0 0 40px 40px;
+    vertical-align: bottom;
+    text-align: left;
+}
+.container-fluid .row .top-part .top-qrcode>img{
+    width: 140px;
+    height: 140px;
+}
+.container-fluid .row .top-part .top-qrcode .title{
+    margin-top: 4px;
+    font-size: 24px;
+}
+.container-fluid .row .top-part .top-qrcode .description{
+    margin-top: 4px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.container-fluid .row .row-first{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(0deg,hsla(0,0%,59%,.15),hsla(0,0%,59%,0));
+}
+/*中间row*/
+.container-fluid .row .middle-part{
+    padding: 30px 0;
+}
+.container-fluid .row .middle-part .text-block{
+    padding: 0 15px;
+    width: 50%;
+    margin-left: 8.33333%;
+    margin-top: 8%;
+    float: left;
+}
+.container-fluid .row .middle-part .text-block-left{
+    width: 45.8333%;
+    margin-left: 4.1667%;
+    float: right;
+}
+.container-fluid .row .middle-part .text-block-right{
+    width: 45.8333%;
+    margin-left: 4.1667%;
+    float: left;
+}
+.container-fluid .row .middle-part .text-block>h3{
+    margin: 20px 0;
+    font-size: 28px;
+    font-weight: 400;
+}
+.container-fluid .row .middle-part .text-block>h6{
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+}
+.container-fluid .row .middle-part .pic1{
+    width: 100%;
+    margin-top: -130px;
+}
+.container-fluid .row .middle-part .col-left{
+    width: 45.8333%;
+    margin-left: 4.16667%;
+    padding: 0 15px;
+    float: left;
+}
+.container-fluid .row .middle-part .col-right{
+    width: 45.8333%;
+    margin-left: 4.16667%;
+    padding: 0 15px;
+    float: right;
+}
+/*底部row*/
+.container-fluid .row .bottom-part{
+    margin: 50px 0 80px;
+}
+.container-fluid .row .bottom-part .qrcode{
+    width: 140px;
+    height: 140px;
+}
+.container-fluid .row .bottom-part .background{
+    width: 765px;
+    height: 172px;
+    position: absolute;
+    left: 50%;
+    margin-left: -380px;
+    margin-top: -100px;
+    /*z-index: -1;*/
+}
 /*************************文章页面布局**********************************/
+.note {
+    position:relative;
+    padding-top:10px;
+}
+.note .post {
+    width:620px;
+    margin:0 auto;
+    padding-top:20px;
+    padding-bottom:40px;
+}
+.note .post .article .title {
+    font-size:34px;
+    font-weight:700;
+    margin:20px 0 0;
+    word-break: break-all;
+}
+.note .post .article .author {
+    margin:30px 0 40px 0;
+}
+.note .post .article .author .avatar {
+    width:48px;
+    height:48px;
+    display:inline-block;
+    border-radius: 50%;
+    border:1px solid #ccc;
+}
+.note .post .article .author .info {
+    display:inline-block;
+    margin-left:10px;
+    vertical-align:middle;
+}
+.note .post .article .author .info .name {
+    font-size:16px;
+    margin-right:5px;
+}
+.note .post .article .follow {
+    background:#42c02e!important;
+    color:#ffff!important;
+    font-size:12px;
+    border-radius: 20px;
+    padding:1px 8px 1px 6px;
+}
+.note .post .article .following {
+    background:#fff;
+    color:#969696;
+    border:1px solid #ccc;
+    font-size:12px;
+    border-radius: 20px;
+    padding:1px 8px 1px 6px;
+}
+.note .post .article .author .meta {
+    margin-top:5px;
+    font-size:12px;
+    color:#969696;
+}
+.note .post .article .author .meta span {
+    margin-right:5px;
+}
+.note .post .article .author .info .btn-sm span {
+    margin-left:5px;
+}
+.note .post .article .show-content {
+    font-size:16px;
+    font-weight:400;
+    word-break: break-word;
+    color:#2f2f2f;
+    line-height:1.7
+}
+.note .post .article .show-content p {
+    margin:0 0 20px;
+}
+.note .post .article .show-foot {
+    margin-bottom:30px;
+}
+.note .post .article .show-foot .notebook {
+    font-size:12px;
+    color:#c8c8c8!important;
+}
+.note .post .article .show-foot .notebook i {
+    margin-right:5px;
+}
+.note .post .article .show-foot .copyright {
+    float:right;
+    font-size:12px;
+    color:#c8c8c8;
+}
+.note .post .article .follow-detail {
+    padding:20px;
+    background: #f8f8f8;
+    border:1px solid #e1e1e1;
+    border-radius: 4px;
+}
+.note .post .article .follow-detail .info{
+    width: 100%;
+}
+.note .post .article .follow-detail .info p{
+    text-align: left;
+}
+.note .post .article .follow-detail .avatar {
+    width:48px;
+    height:48px;
+    float:left;
+    margin-right:10px;
+}
+.note .post .article .follow-detail .btn {
+    float:right;
+    width:100px;
+    padding:6px 0;
+    font-size:16px;
+    box-shadow: none;
+}
+.note .post .article .follow-detail .btn span {
+    margin-left:5px;
+}
+.note .post .article .follow-detail .following {
+    background:none;
+}
+.note .post .article .follow-detail .title{
+    font-size: 17px;
+    line-height: 1.8;
+    margin-right: 5px;
+}
+.note .post .article .follow-detail .info>i{
+    color: #3194d0;
+    font-size: 15px;
+    vertical-align: middle;
+}
+.note .post .article .follow-detail .info p{
+    margin-bottom: 0;
+    color: #969696;
+    font-size: 12px;
+}
+.note .post .article .follow-detail .signature{
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    color: #969696;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+}
 
+.note .post .article .meta-bottom{
+    margin: 40px 0;
+}
+.note .post .article .meta-bottom .like{
+    display: inline-block;
+}
+.note .post .article .meta-bottom .share-group{
+    float: right;
+    position: relative;
+}
+.note .post .article .meta-bottom .like .like-group{
+    border: 1px solid #ea6f5a;
+    padding: 13px 0 15px;
+    border-radius: 40px;
+}
+.note .post .article .meta-bottom .like .like-group1:hover{
+    background: rgb(254,247,245);
+}
+.note .post .article .meta-bottom .like .like-group1{
+    background: #fff;
+    color: #ea6f5a!important;
+}
+.like-group2 {
+    background: #ea6f5a;
+    color: #fff!important;
+}
+.note .post .article .meta-bottom .like .like-group .btn-like{
+    font-size: 19px;
+    display: inline-block;
+}
+.note .post .article .meta-bottom .like .like-group .btn-like a{
+    padding: 18px 15px 18px 30px;
+}
+.note .post .article .meta-bottom .like .like-group .btn-like a i{
+    margin-right: 5px;
+}
+.note .post .article .meta-bottom .like .like-group .modal-wrap{
+    font-size: 18px;
+    display: inline-block;
+    border-left: 1px solid #ea6f5a;
+}
+.note .post .article .meta-bottom .like .like-group .modal-wrap a{
+    padding: 18px 30px 17px;
+}
+.note .post .article .meta-bottom .share-group{
 
-/****************************用户页面***********************************/
+}
+.note .post .article .meta-bottom .share-group a{
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+}
+.note .post .article .meta-bottom .share-group a i{
+    font-size: 20px;
+}
+.note .post .article .meta-bottom .share-group .weibo{
+    color: #42c02e!important;
+}
+.note .post .article .meta-bottom .share-group .weixin{
+    color: #ea6f5a!important;
+}
+.note .post .article .meta-bottom .share-group .qq{
+    color: gray!important;
+}
+.note .post .article .meta-bottom .share-group .more-share{
+    width: auto;
+    padding: 4px 18px;
+    font-size: 14px;
+    color: #9b9b9b!important;
+    line-height: 40px;
+    border-radius: 50px;
+}
+
+.show-other{
+    width: 170px;
+    height: 150px;
+    position: absolute;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    bottom: 60px;
+    right: -40px;
+    box-shadow: 5px 5px 5px #ccc;
+    z-index: 2222;
+}
+.show-other li{
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.show-other li:hover{
+    background: #f1f1f1;
+}
+.show-other li i,b{
+    margin-right: 10px;
+}
+.show-other li span{
+    font-size: 15px;
+}
+.triangle{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top: 10px solid #fff ;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    right: 35px;
+    bottom: 42px;
+}
+.overflay{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: transparent;
+    position: absolute;
+}
+/****************************用户页面**********************************/

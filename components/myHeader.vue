@@ -53,7 +53,7 @@
                 <!--导航栏按钮-->
                 <div class="my-container">
                     <ul class="nav-list">
-                        <li class="active nav-list-li">
+                        <li class="headeractive nav-list-li">
                             <nuxt-link to="/">
                                 <i class="fa fa-compass nav-list-i"></i>
                                 <span class="nav-list-span">发现</span>
@@ -111,7 +111,7 @@
                             <form action="" method="post">
                                 <transition>
                                 <input @focus="bgShow = true" @blur="bgShow = false" type="text" placeholder="搜索"></transition>
-                                <nuxt-link to="/search" :class="{active:bgShow}" class="search-btn"><i class="fa fa-search"></i></nuxt-link>
+                                <nuxt-link to="/search" :class="{headeractive:bgShow}" class="search-btn"><i class="fa fa-search"></i></nuxt-link>
                             </form>
                         </li>
                     </ul>
@@ -183,6 +183,7 @@
         line-height: 20px;
         font-size: 15px;
         color: #969696!important;
+        box-shadow: none;
     }
     nav a.sign-up{
         float: right;
@@ -281,7 +282,7 @@
         margin-right: 10px;
         font-size: 20px;
     }
-    nav .nav-list .active{
+    nav .nav-list .headeractive{
         color: #ea6f5a;
     }
     nav .nav-list li:nth-of-type(3){
@@ -318,9 +319,6 @@
     nav .nav-list .search{
         padding-left: 15px;
     }
-    nav .nav-list .search:hover{
-
-    }
     nav .nav-list .search form{
         margin-top: 9px;
         position: relative;
@@ -346,7 +344,7 @@
         top: 0;
         right: 0;
     }
-    nav .nav-list .search form a.active{
+    nav .nav-list .search form a.headeractive{
         background-color: #969696;
         border-radius: 50%;
         color: #fff!important;
